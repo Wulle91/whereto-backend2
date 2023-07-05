@@ -6,13 +6,13 @@ from .models import FollowLocation
 class FollowLocationSerializer(serializers.ModelSerializer):
 
     owner = serializers.ReadOnlyField(source='owner.username')
-    followed_location = serializers.ReadOnlyField(
+    follow_location = serializers.ReadOnlyField(
         source='followed_location.name')
 
     class Meta:
         model = FollowLocation
         fields = [
-            'id', 'owner', 'created_at', 'followed_name', 'followed_location'
+            'id', 'owner', 'created_at', 'followed_location', 'follow_location'
         ]
 
     def create(self, validated_data):
