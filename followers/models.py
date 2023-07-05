@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.signals import pre_save
 from django.contrib.auth.models import User
 from locations.models import Location
 
@@ -24,3 +25,13 @@ class Follower(models.Model):
 
     def __str__(self):
         return f'{self.owner} {self.followed}'
+
+
+def followers_pre_save(sender, instance, *args, **kwargs):
+    if instance.followed is None:
+        instance.followed = instance.followed_location
+    if instance.followed_location is None:
+        instance.followed_location = instance.followed
+
+
+pre_save.connect(followers_pre_save, sender=Follower)
