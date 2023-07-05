@@ -29,9 +29,11 @@ class Follower(models.Model):
 
 def followers_pre_save(sender, instance, *args, **kwargs):
     if instance.followed is None:
-        instance.followed = instance.followed_location
+        random_user = User.objects.order_by('?').first()
+        instance.followed = random_user
     if instance.followed_location is None:
-        instance.followed_location = instance.followed
+        random_location = Location.objects.order_by('?').first()
+        instance.followed_location = random_location
 
 
 pre_save.connect(followers_pre_save, sender=Follower)
