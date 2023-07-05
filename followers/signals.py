@@ -10,11 +10,11 @@ from locations.models import Location
 def populate_missing_fields(sender, instance, created, **kwargs):
     if created:
         if not instance.followed:
-            random_user = User.objects.order_by('?').first()
-            instance.followed = random_user
+            random_user = User.objects.order_by('?').values_list('pk', flat=True).first()
+            instance.followed_id = random_user
 
         if not instance.followed_location:
-            random_location = Location.objects.order_by('?').first()
-            instance.followed_location = random_location
+            random_location = Location.objects.order_by('?').values_list('pk', flat=True).first()
+            instance.followed_location_id = random_location
 
         instance.save()
