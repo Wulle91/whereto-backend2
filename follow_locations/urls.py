@@ -1,5 +1,5 @@
 from django.urls import path
-from followers import views
+from follow_locations import views
 
 urlpatterns = [
     path('follow/', views.FollowLocationList.as_view()),

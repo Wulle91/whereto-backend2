@@ -1,7 +1,7 @@
 from rest_framework import generics, permissions
 from whereto.permissions import IsOwnerOrReadOnly
 from .models import FollowLocation
-from .serializers import FollowerSerializer
+from .serializers import FollowLocationSerializer
 
 
 class FollowLocationList(generics.ListCreateAPIView):

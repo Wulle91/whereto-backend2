@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import Location
-from followers.models import FollowLoction
+from follow_locations.models import FollowLocation
 
 
 class LocationSerializer(serializers.ModelSerializer):
