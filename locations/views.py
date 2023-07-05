@@ -23,7 +23,6 @@ class LocationList(generics.ListCreateAPIView):
     ordering_fields = [
         'posts_count',
         'name',
-        'followers_count',
     ]
 
 
@@ -31,6 +30,5 @@ class LocationDetail(generics.RetrieveUpdateDestroyAPIView):
 
     queryset = Location.objects.annotate(
         posts_count=Count('name', distinct=True),
-        followers_count=Count('owner__follow_location', distinct=True),
     ).order_by('-created_at')
     serializer_class = LocationSerializer
