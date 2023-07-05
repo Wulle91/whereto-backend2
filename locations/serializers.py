@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import Location
-from followers.models import Follower
+from followers.models import FollowLoction
 
 
 class LocationSerializer(serializers.ModelSerializer):
@@ -12,13 +12,13 @@ class LocationSerializer(serializers.ModelSerializer):
 
     def get_location(self, obj):
         request = self.context['request']
-        return Follower.objects.filter(
+        return FollowLocation.objects.filter(
             owner=request.user, followed_location=obj).exists()
 
     def get_is_following(self, obj):
         request = self.context.get('request')
         if request and request.user.is_authenticated:
-            following = Follower.objects.filter(
+            following = FollowLocation.objects.filter(
                 owner=request.user, followed_location=obj).first()
             return following is not None
         return False
