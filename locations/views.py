@@ -22,7 +22,8 @@ class LocationList(generics.ListCreateAPIView):
     ]
     ordering_fields = [
         'posts_count',
-        'name'
+        'name',
+        'followers_count',
     ]
 
 
