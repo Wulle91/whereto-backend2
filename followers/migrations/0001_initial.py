@@ -26,7 +26,10 @@ class Migration(migrations.Migration):
             ],
             options={
                 'ordering': ['-created_at'],
-                'unique_together': {('owner', 'followed', 'followed_location')},
+                'unique_together': [
+                    ('owner', 'followed'),
+                    ('owner', 'followed_location'),
+                ]
             },
         ),
     ]
