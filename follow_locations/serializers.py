@@ -1,17 +1,18 @@
 from django.db import IntegrityError
 from rest_framework import serializers
-from .models import Follower
+from .models import FollowLocation
 
 
-class FollowerSerializer(serializers.ModelSerializer):
- 
+class FollowLocationSerializer(serializers.ModelSerializer):
+
     owner = serializers.ReadOnlyField(source='owner.username')
-    followed_name = serializers.ReadOnlyField(source='followed.username')
+    followed_location = serializers.ReadOnlyField(
+        source='followed_location.name')
 
     class Meta:
-        model = Follower
+        model = FollowLocation
         fields = [
-            'id', 'owner', 'created_at', 'followed', 'followed_name'
+            'id', 'owner', 'created_at', 'followed_name', 'followed_location'
         ]
 
     def create(self, validated_data):
@@ -19,4 +20,3 @@ class FollowerSerializer(serializers.ModelSerializer):
             return super().create(validated_data)
         except IntegrityError:
             raise serializers.ValidationError({'detail': 'possible duplicate'})
-        

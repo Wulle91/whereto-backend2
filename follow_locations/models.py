@@ -1,0 +1,22 @@
+from django.db import models
+from django.db.models.signals import pre_save
+from django.contrib.auth.models import User
+from locations.models import Location
+
+
+class FollowLocation(models.Model):
+    owner = models.ForeignKey(
+        User, related_name='followin', on_delete=models.CASCADE,
+    )
+    followed_location = models.ForeignKey(
+        Location, related_name='follow_locations',
+        on_delete=models.CASCADE,
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created_at']
+        unique_together = ['owner', 'followed_location']
+
+    def __str__(self):
+        return f'{self.owner} {self.followed_location}'
