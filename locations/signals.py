@@ -7,7 +7,13 @@ from .models import Location
 @receiver(post_save, sender=Post)
 def create_location(sender, instance, created, **kwargs):
     if created:
-        if Location.DoesNotExist:
+        try:
+            location = Location.objects.get(
+                name=instance.name,
+                address=instance.address,
+
+            )
+        except Location.DoesNotExist:
             location = Location.objects.create(
                 name=instance.name,
                 address=instance.address,
