@@ -37,7 +37,7 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 10,
     'DATETIME_FORMAT': '%d %b %Y',
 }
-if 'DEV' in os.environ:
+if 'DEV' not in os.environ:
     REST_FRAMEWORK['DEFAULT_RENDEREr_CLASSES'] = [
         'rest_framework.renderers.JSONRenderer',
     ]
