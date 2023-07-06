@@ -25,7 +25,7 @@ class ProfileSerializer(serializers.ModelSerializer):
             ).first()
             return following.id if following else None
         return None
-
+    
     def get_following_location_id(self, obj):
         user = self.context['request'].user
         if user.is_authenticated:
