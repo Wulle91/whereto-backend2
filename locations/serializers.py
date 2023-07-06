@@ -16,10 +16,11 @@ class LocationSerializer(serializers.ModelSerializer):
             owner=request.user, followed_location=obj).exists()
 
     def get_is_following(self, obj):
-        request = self.context.get('request')
-        if request and request.user.is_authenticated:
+        user = self.context.get('request').user
+        if user.is_authenticated:
             following = FollowLocation.objects.filter(
-                owner=request.user, followed_location=obj).first()
+                owner=user, followed_location=obj.owner
+            ).first()
             return following.id is not None
         return False
 
