@@ -1,7 +1,6 @@
 from rest_framework import serializers
 from .models import Profile
 from followers.models import Follower
-from follow_locations.models import FollowLocation
 
 
 class ProfileSerializer(serializers.ModelSerializer):
@@ -22,15 +21,6 @@ class ProfileSerializer(serializers.ModelSerializer):
         if user.is_authenticated:
             following = Follower.objects.filter(
                 owner=user, followed=obj.owner
-            ).first()
-            return following.id if following else None
-        return None
-    
-    def get_following_location_id(self, obj):
-        user = self.context['request'].user
-        if user.is_authenticated:
-            following = FollowLocation.objects.filter(
-                owner=user, followed_location=obj
             ).first()
             return following.id if following else None
         return None
