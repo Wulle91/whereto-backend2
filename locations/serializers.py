@@ -20,7 +20,7 @@ class LocationSerializer(serializers.ModelSerializer):
         if request and request.user.is_authenticated:
             following = FollowLocation.objects.filter(
                 owner=request.user, followed_location=obj).first()
-            return following is not None
+            return following.id is not None
         return False
 
     class Meta:
