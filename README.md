@@ -1,108 +1,133 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Whereto
 
-Welcome Wulle91,
+Whereto is a travel companion app that revolutionizes the way users explore new cities. With Whereto, travelers have a wealth of information at their fingertips to make their journeys more enjoyable and enriching. The app allows users to effortlessly discover recommendations from fellow travelers, immerse themselves in captivating user-generated posts, and curate their own personalized travel bucket lists.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Whether you're seeking hidden gems, popular attractions, or delightful dining experiences, Whereto provides valuable insights to help you make informed decisions. The app goes beyond traditional travel guides by fostering a vibrant community where users can connect, share their travel stories, and engage in discussions. From exhilarating adventures to cultural festivals, Whereto keeps users informed about events and promotions happening near them, even when they're at home.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Whereto empowers travelers to explore with confidence and discover the essence of each city they visit. With its intuitive interface and user-friendly features, the app becomes an indispensable companion that enhances every step of the travel experience. From planning to reminiscing, Whereto ensures that every journey is filled with memorable moments and extraordinary discoveries.
 
-## Gitpod Reminders
+## Design
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+![Responsice Mockup](https://github.com/Wulle91/wheretobackend2/blob/main/assets/Captur.PNG)
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
+### Ho to play
 
-Another blue button should appear to click: _Open Browser_.
+Whereto is a dynamic travel companion app that allows users to create profiles, share posts, discover exciting locations, engage with others through likes and comments, and stay connected with the travel community. It offers a range of features designed to enhance the user experience and facilitate exploration.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Upon creating an account and logging in, users can create their profiles, storing their information securely in the app's database. With their profile set up, users can dive into the world of travel and start sharing their experiences through posts. When creating a post, the location is automatically detected and associated with the content, providing context to other users.
 
-A blue button should appear to click: _Make Public_,
+The app's home page serves as a hub for users to discover posts from travelers worldwide. It showcases an array of captivating content, including travel stories, recommendations, and insights shared by fellow users. This immersive feed allows users to stay inspired, gain valuable travel information, and connect with others who share their passion for exploration.
 
-Another blue button should appear to click: _Open Browser_.
+To foster connections within the community, Whereto enables users to follow other users or specific locations of interest. By following people, users can stay updated on their latest posts, recommendations, and travel experiences. Similarly, following locations allows users to receive updates on popular places, upcoming events, and promotions.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Engagement is encouraged through likes and comments. Users can express appreciation for posts by liking them and leave thoughtful comments to spark conversations and provide feedback. This interaction creates a sense of camaraderie and encourages a supportive community where users can learn from one another and share their perspectives.
 
-To log into the Heroku toolbelt CLI:
+In addition to user-generated content, Whereto provides a comprehensive view of locations near the user. Users can easily explore places of interest, see their popularity based on likes and comments, and discover any popular events happening nearby. This feature enables users to stay informed about local activities, ensuring they make the most of their travel experiences.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+Whereto empowers travelers to document their journeys, connect with like-minded individuals, and uncover hidden gems worldwide. With its intuitive interface, personalized content, and engagement-focused features, the app creates a vibrant and immersive travel community. Whether users seek inspiration, practical recommendations, or connections with fellow explorers, Whereto is the ultimate companion for their travel adventures.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
-------
 
-## Release History
+### Featurs
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+1. Profile Creation: Users can create personalized profiles to showcase their travel preferences, experiences, and interests.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+2. Post Creation: Users can create and share posts, including travel stories, recommendations, photos, and descriptions.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+3. Automatic Location Detection: The app automatically associates location information with user-generated posts, providing context and making it easier for others to discover relevant content.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+4. Location Discovery: Users can explore and discover exciting locations worldwide, accessing detailed information, ratings, reviews, and photos shared by the community.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+5. Home Feed: The app's home feed displays a curated selection of posts from users worldwide, allowing users to stay inspired and informed about travel experiences and recommendations.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+6. Following: Users can follow other users and specific locations, receiving updates on their latest posts and recommendations.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+7. Likes and Comments: Users can engage with posts by liking them and leaving comments, fostering interaction and conversations within the community.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+8. Nearby Locations: The app provides information about locations near the user, allowing them to discover popular places, events, and promotions in their vicinity.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+9. Personalized Recommendations: Whereto offers personalized recommendations based on user preferences, helping users find places that match their interests and travel style.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+10. Event Updates: Users can stay informed about local events, festivals, exhibitions, and other activities happening near them or in their selected cities.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+11. Travel Bucket List: Users can create a travel bucket list, curating a collection of destinations they want to visit, and track their progress.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Data Model 
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+1. Profile: The Profile model represents a user profile associated with the User model from Django's built-in authentication system. It contains fields for the profile owner (one-to-one relationship with User), creation and update timestamps, profile name, content, and an optional profile image. The model allows users to create and customize their profiles within the app.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+2. Post: The Post model represents a user-generated post within the app. It is linked to the User model through a foreign key relationship, indicating the owner of the post. The model includes fields for creation and update timestamps, post name, address, image URL, title, content, and an optional image. Posts can be created by users to share their travel experiences, stories, and recommendations.
 
-------
+3. Location: The Location model represents a specific location within the app. It includes fields for the location name, address, creation timestamp, and an optional image URL. This model allows users to discover and explore various locations, which can be associated with posts and provide contextual information about the places being discussed.
 
-## FAQ about the uptime script
+4. Like: The Like model represents a user's like or appreciation for a specific post. It establishes a many-to-one relationship with both the User model and the Post model. The model includes fields for the owner (the user who liked the post), the post being liked, and a creation timestamp. Users can like posts to show their support and engagement with the content.
 
-**Why have you added this script?**
+5. Follower: The Follower model tracks the relationship between users for the purpose of following other users. It establishes a many-to-one relationship with the User model, representing the user who initiates the follow action, and another User model as the followed user. The model includes a creation timestamp. Users can follow each other to stay connected, receive updates, and engage with each other's posts.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+6. FollowLocation: The FollowLocation model represents the relationship between a user and a specific location they choose to follow. It establishes a many-to-one relationship with the User model and the Location model, allowing users to follow locations of interest. The model includes a creation timestamp. Users can follow locations to receive updates, discover relevant posts, and stay informed about events or promotions happening at those locations.
 
-**How will this affect me?**
+7. Comment: The Comment model represents a user's comment on a specific post. It establishes a many-to-one relationship with both the User model and the Post model. The model includes fields for the comment owner, the post being commented on, creation and update timestamps, and the comment content. Users can engage in discussions, share their thoughts, and interact with other users' posts through comments.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+These data models provide the foundation for storing and organizing the relevant information in your app, enabling users to create profiles, share posts, interact with other users and locations, and engage in conversations.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+- __Bugs__
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+  - As i was doing my project I encoutered many bugs, i didn't know how complex would this be to make and as i work on logic it became more and more complex so i often made errors in logic or improperly used functions or methods, often string with numbers misplaced and forever shearched where and what went wrong 
+           
+  - Whenn i was first done with the app i hade two functions with approx. 150 lines of code, it took a big chunk of my time tring to make my code "atomic"
 
-**So….?**
+  - I initially created one model to handle both followers and follow_locations. However, I found it to be complicated to work with the data properly when both functionalities were combined in one model. As a result, I decided to create two separate models for followers and follow_locations. This approach has proven to be more manageable, allowing for clearer data organization and smoother implementation of the desired functionalities.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
 
-**Can I opt out?**
+- __Deployment__
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+  Steps for deployment:
+             
+  - Fork or clone this repository
+  - Create new Heroku app
+  - Set the buildbacks to Python and Node.JS in that order
+  - Link the Heroku app to repository
+  - Click on Deploy
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+- __Testing__
 
-**Anything more?**
+  I have manually tested this project by doing following:
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+  - Passed code throught PEP8 liner and confirmed there are no problems.
+            
+  - Given invalid inputs: strings when numbers are expected or out of bounds inputs
 
----
+  - Tested in my local terminal and the code intitute Heroku terminal
 
-Happy coding!
+
+
+`Poker`
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Create Profile | create Profile| Tryed to create profile | Profile created | Pass |
+| Create Post| create post, upload mage set location | Post displayed on page | Post created| Pass |
+| Like Post | Like posts | Liked one selected post | Instace of like created | Pass |
+| Comment Post | Leave comment on post | Wrote comment | comment displayed | Pass |
+| Location created | On post creation location creates automaticly | Post created| location created | Pass |
+| Follow user | Sellect user to follow | Follow displayed| Follow displayed | Pass |
+| Follow location| Sellect location to follow  | pFollow displayed | Follow displaye | Pass |
+
+I confirmed that the form works: requires entries in every field, will only accept number in the inpput field, and the errors work properly.
+
+
+
+## Credits 
+
+- Stack Overflow, YouTube, and other online resources have been invaluable in my development process. I have utilized code snippets and logic found on these platforms and tailored them to meet the specific requirements of my project. Adapting and customizing the code to fit my needs has allowed me to implement desired features effectively and efficiently. However, it's important to ensure compliance with licenses, copyrights, and attribution requirements associated with the resources used. I have taken care to review and adhere to any guidelines or obligations outlined by the authors or platforms. Thorough testing and validation have been conducted to ensure that the adjusted code works seamlessly within my project.
+
+### Content 
+
+- Code institute for deployment terminal     
+- Stack overflow on numerous occasions. I looked all the time how have others solved problems as mine, which methods did they use and did we have the same or different logic for the same problems.  
+- Wikipedia for the details of the Poker game
+
+
+
