@@ -7,7 +7,7 @@ Whether you're seeking hidden gems, popular attractions, or delightful dining ex
 Whereto empowers travelers to explore with confidence and discover the essence of each city they visit. With its intuitive interface and user-friendly features, the app becomes an indispensable companion that enhances every step of the travel experience. From planning to reminiscing, Whereto ensures that every journey is filled with memorable moments and extraordinary discoveries.
 
 
-### Ho to play
+### how to use
 
 Whereto is a dynamic travel companion app that allows users to create profiles, share posts, discover exciting locations, engage with others through likes and comments, and stay connected with the travel community. It offers a range of features designed to enhance the user experience and facilitate exploration.
 
