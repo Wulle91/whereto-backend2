@@ -7,7 +7,7 @@ Whether you're seeking hidden gems, popular attractions, or delightful dining ex
 Whereto empowers travelers to explore with confidence and discover the essence of each city they visit. With its intuitive interface and user-friendly features, the app becomes an indispensable companion that enhances every step of the travel experience. From planning to reminiscing, Whereto ensures that every journey is filled with memorable moments and extraordinary discoveries.
 
 
-### how to use
+### How to use
 
 Whereto is a dynamic travel companion app that allows users to create profiles, share posts, discover exciting locations, engage with others through likes and comments, and stay connected with the travel community. It offers a range of features designed to enhance the user experience and facilitate exploration.
 
@@ -77,15 +77,72 @@ These data models provide the foundation for storing and organizing the relevant
   - I initially created one model to handle both followers and follow_locations. However, I found it to be complicated to work with the data properly when both functionalities were combined in one model. As a result, I decided to create two separate models for followers and follow_locations. This approach has proven to be more manageable, allowing for clearer data organization and smoother implementation of the desired functionalities.
 
 
-- __Deployment__
+## Deployment
 
-  Steps for deployment:
-             
-  - Fork or clone this repository
-  - Create new Heroku app
-  - Set the buildbacks to Python and Node.JS in that order
-  - Link the Heroku app to repository
-  - Click on Deploy
+## Version Control
+
+The site was created using the Gitpod editor and pushed to github to the remote repository ‘whereto-frontend’.
+
+The following git commands were used throughout development to push code to the remote repo:
+
+```git add .``` - This command was used to add the file(s) to the staging area before they are committed.
+
+```git commit -m “commit message”``` - This command was used to commit changes to the local repository queue ready for the final step.
+
+```git push``` - This command was used to push all committed code to the remote repository on github.
+
+<hr>
+<br>
+
+## Heroku Deployment
+
+The site was deployed to Heroku. The steps to deploy are as follows:
+
+* Navigate to heroku and create an account
+* Click the new button in the top right corner
+* Select create new app
+* Enter app name
+* Select region and click create app
+* Click the resources tab and search for Heroku Postgres
+* Go to the settings tab and then click reveal config vars
+* Add the following config vars:
+  * SECRET_KEY: (Your secret key)
+  * DATABASE_URL: (This should already exist)
+  * ALLOWED_HOST:
+  * CLIENT_ORIGIN: url for the client front end react application that wil be making requests to these APIs
+  * CLIENT_ORIGIN_DEV: address of the local server used to preview and test UI during development of the front end client application
+  * CLOUDINARY_URL:
+  * DISABLE_COLLECTSTATIC: 1
+  * HEROKU_POSTGRESQL_CYAN_URL
+
+* Select hobby dev and continue
+* Click the deploy tab
+* Scroll down to Connect to GitHub/whereto-frontend and sign in / authorize when prompted
+* In the search box, find the repositoy you want to deploy and click connect
+* Scroll down to Manual deploy and choose the main branch
+* Click deploy
+
+<hr>
+<br>
+
+#### How to Fork
+
+To fork the whereto-frontend repository:
+
+1. Log in (or sign up) to Github.
+2. Go to the repository for this project, whereto-frontend.
+3. Click the Fork button in the top right corner.
+
+#### How to Clone
+
+To clone the whereto-frontend repository:
+
+1. Log in (or sign up) to GitHub.
+2. Go to the repository for this project, whereto-frontend.
+3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
+
 
 - __Testing__
 
