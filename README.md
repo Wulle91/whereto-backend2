@@ -117,7 +117,7 @@ The site was deployed to Heroku. The steps to deploy are as follows:
 
 * Select hobby dev and continue
 * Click the deploy tab
-* Scroll down to Connect to GitHub/whereto-frontend and sign in / authorize when prompted
+* Scroll down to Connect to GitHub/whereto-backend2 and sign in / authorize when prompted
 * In the search box, find the repositoy you want to deploy and click connect
 * Scroll down to Manual deploy and choose the main branch
 * Click deploy
@@ -127,24 +127,24 @@ The site was deployed to Heroku. The steps to deploy are as follows:
 
 #### How to Fork
 
-To fork the whereto-frontend repository:
+To fork the whereto-backend repository:
 
 1. Log in (or sign up) to Github.
-2. Go to the repository for this project, whereto-frontend.
+2. Go to the repository for this project, whereto-backend.
 3. Click the Fork button in the top right corner.
 
 #### How to Clone
 
-To clone the whereto-frontend repository:
+To clone the whereto-backend repository:
 
 1. Log in (or sign up) to GitHub.
-2. Go to the repository for this project, whereto-frontend.
+2. Go to the repository for this project, whereto-backend.
 3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
 4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
 5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
 
 
-- __Testing__
+### Testing
 
   I have manually tested this project by doing following:
 
@@ -156,14 +156,17 @@ To clone the whereto-frontend repository:
 
 
 
-`Poker`
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | Create Profile | create Profile| Tryed to create profile | Profile created | Pass |
-| Create Post| create post, upload mage set location | Post displayed on page | Post created| Pass |
+| Create Post| create post, upload mage set location | Post displayed on page | Post created | Pass |
+| Edit Post| Edit post, imagee, location | Displayed post sholud be changed | Post changed | Pass |
 | Like Post | Like posts | Liked one selected post | Instace of like created | Pass |
+| Unlike Post | Unlike posts | Unliked one selected post | Instace of like is deleted | Pass |
 | Comment Post | Leave comment on post | Wrote comment | comment displayed | Pass |
+| Edit Comment| Edit my comment | Displayed comment chould be changed | Comment changed | Pass |
+| Delete Comment| Delete Comment | Comment sholud not be displayed | Comment is not displayed | Pass |
 | Location created | On post creation location creates automaticly | Post created| location created | Pass |
 | Follow user | Sellect user to follow | Follow displayed| Follow displayed | Pass |
 | Follow location| Sellect location to follow  | pFollow displayed | Follow displaye | Pass |
